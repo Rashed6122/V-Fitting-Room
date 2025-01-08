@@ -16,12 +16,27 @@ body {
 
 
 .container {
-  max-width: 1200px;
+  
   margin: 0 auto; /* Center the container */
   padding: 20px;
   display: flex;
   justify-content: space-around;
 }
+.containerMain {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+.containerHeader {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
 
 header {
    /* Style header, logo, navigation */
@@ -56,9 +71,10 @@ nav li {
 
 nav a {
     text-decoration: none; /* Remove underlines from links */
-    color: var(--primary-color); /* Example link color */
+    color: #79BCCF; /* Example link color */
+    font-weight: 800;
+    font-size: 16px;
 }
-
 
 .sponsored {
     /* Style sponsored by section */
@@ -66,28 +82,39 @@ nav a {
 }
 
 .image-container {
+  position: relative;
+  width: 844px; /* Adjust to your desired size */
+  height: 200px; /* Set the height explicitly to match the image size */
+  overflow: hidden;
+  top: 400px;
+  left: -20px;
+  z-index: 15;
+}
+
+.image-container-try {
     position: relative;
-    width: 844px; /* Adjust to your desired size */
-    height: 200px; /* Set the height explicitly to match the image size */
+    width: 600px; /* Adjust to your desired size */
+    height: 160px; /* Set the height explicitly to match the image size */
     overflow: hidden;
-    top: 400px;
-    left: -20px;
+    top: px;
     z-index: 15;
-  }
+    margin: 0 auto;
+}
+    
   
-  .image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Ensure the image fills the container */
-    height: 100%; /* Scale the image to match the container */
-    opacity: 0;
-    transition: opacity 3s cubic-bezier(0.4, 0, 0.2, 1);;
-  }
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure the image fills the container */
+  height: 100%; /* Scale the image to match the container */
+  opacity: 0;
+  transition: opacity 3s cubic-bezier(0.4, 0, 0.2, 1);;
+}
   
-  .image.active {
-    opacity: 1; /* Only the active image is visible */
-  }
+.image.active {
+  opacity: 1; /* Only the active image is visible */
+}
 
 .hero {
     /* Styles for the main hero section */
@@ -96,15 +123,26 @@ nav a {
     height: 85.5vh; /* Full viewport height */
     padding: 50px 0;  
     text-align: center;
-    animation: example 12s ease-in-out infinite;
-    background: linear-gradient(90deg,rgba(195, 227, 250, 1) 0% ,rgba(239, 175, 188, 1)100%);
+    animation: color-change-3x 6s linear infinite alternate both;
+    /* background: linear-gradient(90deg,rgba(195, 227, 250, 1) 0% ,rgba(239, 175, 188, 1)100%); */
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 }
-@keyframes example {
-    0%   {background: linear-gradient(90deg,rgba(195, 227, 250, 1) 0% ,rgba(239, 175, 188, 1)100%);}
-    50%  {background: linear-gradient(90deg,rgba(239, 175, 188, 1) 0% ,rgba(255, 255, 255, 1)100%);}
-    100% {background: linear-gradient(90deg,rgba(245, 51, 91, 1)  0% ,rgba(195, 227, 250, 1)100%);}
+.heroTry {
+    position: relative; 
+    width: auto;
+    height: 95.5vh; /* Full viewport height */
+    padding: 15px 0;  
+    text-align: center;
+    animation: color-change-3x 6s linear infinite alternate both;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+@keyframes color-change-3x {
+    0%   {background: rgba(195, 227, 250, 1);}
+    50%  {background: rgba(239, 175, 188, 1);}
+    100% {background: rgba(245, 51, 91, 1);}
 }
 
 #rectangle{
@@ -136,14 +174,13 @@ nav a {
     z-index: 5;
 }
 
-
 .hero-content {
    justify-content: left;
    text-align: left;
    position: absolute;
    left: 76px;
    top: 80px;
-   z-index: 10;
+   z-index: 20;
 }
 
 .hero-content h2 {
@@ -259,6 +296,7 @@ nav a {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
     line-height: 21px;
     letter-spacing: 0.5px;  
+    z-index: 20;
 }
 
 
@@ -274,3 +312,117 @@ nav a {
     color: #87CEEB;     /* Light blue color for arrow */
 }
 
+.rounded-window {
+    width: 90%; /* Adjust the width as needed */
+    height: 600px; /* Adjust the height as needed */
+    margin: 1px auto; /* Center the window */
+    border-radius: 15px; /* Rounded corners */
+    background-color: #f0f0f0; /* Light gray background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Ensure content stays inside the rounded corners */
+    padding: 20px; /* Add some padding inside the window */
+    text-align: center; /* Center-align content inside the window */
+}
+
+.rounded-window h2 {
+    margin: 0;
+    color: #333;
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.upload-area {
+    width: 100%; /* Adjust size as needed */
+    height: 350px; /* Adjust height as needed */
+    margin: 20px auto;
+    background-color: #fff;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+    position: relative;
+}
+
+.upload-area.dragover {
+    border-color: #79bccf;
+    background-color: #f0f8ff;
+}
+
+.upload-area img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.upload-area a {
+    color: #1849D6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.upload-area a:hover {
+    text-decoration: underline;
+}
+
+.upload-area small {
+    color: #888;
+    margin-top: 5px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+.uploaded-image-container {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.uploaded-image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.vertical-line {
+    width: 2px;
+    background-color: #ccc;
+    height: 100%;
+}
+
+.clothes-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.clothes-container img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.clothes-container img:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}

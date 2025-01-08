@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothes - Virtual Try-On</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="containerHeader">
+            <nav>
+                <ul>
+                    <li><a class="home" href="#">HOME</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="heroTry">
+            <div class="container">
+                <div class="rounded-window">
+                    <h2><span style="color: #79BCCF;">TRY</span> VIRTUAL TRY ON</h2>
+                    <div class="upload-area" id="upload-area">
+                        <img src="imgs/cloud-upload.png" alt="Upload Icon" class="upload-icon">
+                        <p>Drag your file(s) or <a href="#" id="browse-link">browse</a></p>
+                        <small>Max 10 MB files are allowed</small>
+                        <input type="file" id="file-input" accept="image/*">
+                    </div>
+                    <div class="image-container-try">
+                        <img id="image1" class="image active" src="imgs/Property1.png" alt="Rotating Image 1">
+                        <img id="image2" class="image" src="imgs/Property2.png" alt="Rotating Image 2">
+                        <img id="image3" class="image" src="imgs/Property3.png" alt="Rotating Image 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
