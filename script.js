@@ -70,18 +70,73 @@ browseLink.addEventListener("click", (e) => {
 
 // Replace upload area content
 function replaceUploadInterface(imageSrc) {
+  const images2 = document.querySelectorAll('.image2');
+  images2.forEach((img, index) => {
+    img.classList.toggle('active', index === 1); // Add 'active' only to the current image
+  });
     uploadArea.innerHTML = `
         <div class="content-wrapper">
             <div class="uploaded-image-container">
                 <img src="${imageSrc}" alt="Uploaded Image">
+                <p class="image-caption">YOUR IMAGE</p>
             </div>
             <div class="vertical-line"></div>
-            <div class="clothes-container">
-                <img src="imgs/clothes1.png" alt="Clothes 1">
-                <img src="imgs/clothes1.png" alt="Clothes 2">
-                <img src="imgs/clothes1.png" alt="Clothes 3">
-                <!-- Add more clothes images -->
+            <div class="clothes-section">
+                <h2>Choose Your Outfit</h2>
+                <div class="clothes-container">
+                    <img src="imgs/clothes1.png" alt="Clothes 1" class="clothes-image">
+                    <img src="imgs/clothes1.png" alt="Clothes 2" class="clothes-image">
+                    <img src="imgs/clothes1.png" alt="Clothes 3">
+                    <img src="imgs/clothes1.png" alt="Clothes 4">
+                    <img src="imgs/clothes1.png" alt="Clothes 5">
+                    <img src="imgs/clothes1.png" alt="Clothes 6">
+                    <img src="imgs/clothes1.png" alt="Clothes 1">
+                    <img src="imgs/clothes1.png" alt="Clothes 2">
+                    <img src="imgs/clothes1.png" alt="Clothes 3">
+                    <img src="imgs/clothes1.png" alt="Clothes 4">
+                    <img src="imgs/clothes1.png" alt="Clothes 5">
+                    <img src="imgs/clothes1.png" alt="Clothes 6">
+                    <img src="imgs/clothes1.png" alt="Clothes 1">
+                    <img src="imgs/clothes1.png" alt="Clothes 2">
+                    <img src="imgs/clothes1.png" alt="Clothes 3">
+                    <img src="imgs/clothes1.png" alt="Clothes 4">
+                    <img src="imgs/clothes1.png" alt="Clothes 5">
+                    <img src="imgs/clothes1.png" alt="Clothes 6">
+                    <!-- Add more images as needed -->
+                </div>
             </div>
         </div>
     `;
+    const clothesImages = document.querySelectorAll('.clothes-image');
+    clothesImages.forEach((clothingImage) => {
+      clothingImage.addEventListener('click', () => handleClothesClick(imageSrc));
+    });
+}
+
+function handleClothesClick(imageSrc) {
+  // Update the upload area to show only the uploaded image centered
+  document.querySelector('.image-container-try').style.display = 'none';
+  document.querySelector('.upload-area').style.height = '500px';
+  uploadArea.innerHTML = `
+    <div class="uploaded-image-container">
+        <img src="${imageSrc}" alt="Uploaded Image" class="centered-image">
+    </div>
+  `;
+  const finalContainer = document.querySelector('.uploaded-image-container');
+
+  // Create a new title element
+  const titleElement = document.createElement('h2');
+
+  // Set the text content of the title
+  titleElement.textContent = 'Final Look';
+
+  // Add styles to center the title
+  titleElement.style.textAlign = 'center';
+  titleElement.style.marginBottom = '20px'; // Add some space below the title
+  titleElement.style.fontSize = '24px'; // Adjust font size
+  titleElement.style.color = '#333'; // Adjust text color
+  titleElement.style.fontWeight = 'normal';
+
+  // Insert the title at the top of the final container
+  finalContainer.insertBefore(titleElement, finalContainer.firstChild);
 }
