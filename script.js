@@ -117,6 +117,7 @@ function handleClothesClick(imageSrc) {
   // Update the upload area to show only the uploaded image centered
   document.querySelector('.image-container-try').style.display = 'none';
   document.querySelector('.upload-area').style.height = '500px';
+  const uploadArea = document.getElementById('upload-area');
   uploadArea.innerHTML = `
     <div class="uploaded-image-container">
         <img src="${imageSrc}" alt="Uploaded Image" class="centered-image">
@@ -139,4 +140,48 @@ function handleClothesClick(imageSrc) {
 
   // Insert the title at the top of the final container
   finalContainer.insertBefore(titleElement, finalContainer.firstChild);
+
+  // Create buttons container
+  const buttonsContainer = document.createElement('div');
+  buttonsContainer.style.display = 'flex';
+  buttonsContainer.style.justifyContent = 'center';
+  buttonsContainer.style.gap = '20px';
+  buttonsContainer.style.marginTop = '20px';
+
+  // Create Retry button
+  const retryButton = document.createElement('button');
+  retryButton.textContent = 'Retry';
+  retryButton.style.padding = '5px 50px';
+  retryButton.style.fontSize = '16px';
+  retryButton.style.cursor = 'pointer';
+  retryButton.style.backgroundColor = '#FFFFFF'; // Adjust button color
+  retryButton.style.color = '#000000';
+  retryButton.style.border = '1px solid #FFFFFF';
+  retryButton.style.borderRadius = '8px';
+  retryButton.addEventListener('click', () => {
+    window.location.href = 'TryOnPage.html'; // Redirect to TryOnPage.html
+  });
+
+  // Create Exit button
+  const exitButton = document.createElement('button');
+  exitButton.textContent = 'Exit';
+  exitButton.style.padding = '5px 56px';
+  exitButton.style.fontSize = '16px';
+  exitButton.style.cursor = 'pointer';
+  exitButton.style.backgroundColor = '#FFFFFF'; // Adjust button color
+  exitButton.style.color = '#000000';
+  exitButton.style.border = '1px solid #FFFFFF';
+  exitButton.style.borderRadius = '8px';
+  exitButton.addEventListener('click', () => {
+    window.location.href = 'index.html'; // Redirect to index.html
+  });
+
+  // Append buttons to the buttons container
+  buttonsContainer.appendChild(retryButton);
+  buttonsContainer.appendChild(exitButton);
+
+  // Append buttons container below the upload-area in the rounded-window
+  const roundedWindow = document.querySelector('.rounded-window');
+  roundedWindow.appendChild(buttonsContainer);
 }
+

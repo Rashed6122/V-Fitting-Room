@@ -76,6 +76,7 @@ nav a {
     font-size: 16px;
 }
 
+
 .sponsored {
     /* Style sponsored by section */
     text-align: right;
@@ -99,6 +100,7 @@ nav a {
     top: px;
     z-index: 15;
     margin: 0 auto;
+    margin-top: 25px;
 }
     
   
@@ -146,8 +148,9 @@ nav a {
 .heroTry {
     position: relative; 
     width: auto;
-    height: 95.5vh; /* Full viewport height */
+    height: 99.5vh; /* Full viewport height */
     padding: 15px 0;  
+    margin-top: -6px;
     text-align: center;
     animation: color-change-3x 6s linear infinite alternate both;
     border-top-left-radius: 40px;
@@ -350,7 +353,7 @@ nav a {
 .upload-area {
     width: 100%; /* Adjust size as needed */
     height: 350px; /* Adjust height as needed */
-    margin: 20px auto;
+    margin: 10px auto;
     background-color: #fff;
     border: 2px dashed #ccc;
     border-radius: 10px;
@@ -500,5 +503,28 @@ input[type="file"] {
     object-fit: contain;
     border-radius: 10px;
 }
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 5px; /* Adjust spacing as needed */
+}
 
-  
+.exit-icon {
+    color: #000000; /* Red color for the X icon */
+    font-size: 20px; /* Adjust size */
+    font-weight: lighter;
+    text-decoration: none;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.exit-icon:hover {
+    color: #65909f; /* Darker red on hover */
+}
+
+.exit-icon svg {
+    fill: #ff4d4d; /* Apply color for SVG icon */
+    width: 24px; /* Adjust size */
+    height: 24px;
+}

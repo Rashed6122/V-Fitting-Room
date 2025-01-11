@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clothes - Virtual Try-On</title>
     <link rel="stylesheet" href="style.css">
@@ -20,7 +21,17 @@
         <section class="heroTry">
             <div class="container">
                 <div class="rounded-window">
-                    <h2><span style="color: #79BCCF;">TRY</span> VIRTUAL TRY ON</h2>
+                    <div class="header-row">
+                        <h2>
+                            <span style="color: #79BCCF;">TRY</span> VIRTUAL TRY ON
+                        </h2>
+                        <a href="index.html" class="exit-icon" aria-label="Exit">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="thin-x">
+                                <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                <line x1="6" y1="18" x2="18" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </a>                        
+                    </div>
                     <div class="upload-area" id="upload-area">
                         <img src="imgs/cloud-upload.png" alt="Upload Icon" class="upload-icon">
                         <p>Drag your file(s) or <a href="#" id="browse-link">browse</a></p>
