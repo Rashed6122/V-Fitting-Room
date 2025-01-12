@@ -30,13 +30,104 @@ body {
     justify-content: space-around;
   }
 
-.containerHeader {
-    max-width: 1200px;
-    margin: 0 auto; /* Center the container */
-    padding: 20px;
+
+  .containerHeader {
+    width: 100%;
+    padding: 5px 30px; /* Adjust padding as needed */
+    box-sizing: border-box;
+}
+
+nav ul {
     display: flex;
-    justify-content: space-around;
-  }
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li:first-child {
+    justify-content: flex-start;
+}
+
+nav ul li:last-child {
+    justify-content: flex-end;
+}
+
+.left-logo img {
+    height: 50px; /* Adjust the height as needed */
+}
+
+.home a {
+    text-decoration: none;
+    color: #79BCCF; /* Adjust the color as needed */
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+.SPONSORED{
+    margin-bottom: 10px;
+}
+
+.right-sponsor {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+}
+
+.sponsor-text {
+    font-size: 16px; /* Adjust the font size as needed */
+    margin-bottom: 10px; /* Space between "SPONSORED BY" and the logo */
+    font-family: Arial, sans-serif;
+    font-weight: 530;
+    
+}
+
+.sponsor-content {
+    display: flex;
+    align-items: center; /* Align logo and text vertically */
+}
+
+.iono{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Align content to the left */
+    padding: 0px 0px;
+}
+
+.top-iono-logo {
+    height: 50px; /* Adjust the height as needed */
+    margin-right: -10 px; /* Space between logo and text */
+    margin-top: -18px;
+    animation: spin2D 3s linear infinite;
+}
+@keyframes spin2D {
+    from { 
+        transform: rotateY(0deg); 
+    }
+    to { 
+        transform: rotateY(360deg);
+    }
+}
+
+.iono-text {
+    font-size: 16px; /* Adjust the font size as needed */
+    margin-right: 5px; /* Space between "IONO" and "TECHNOLOGY" */
+    font-family: Arial, sans-serif;
+    color: #5CA75C;
+}
+
+.technology-text1 {
+    font-size: 16px; /* Adjust the font size as needed */
+    margin-right: 5px; /* Space between "IONO" and "TECHNOLOGY" */
+    font-family: Arial, sans-serif;
+}
 
 header {
    /* Style header, logo, navigation */

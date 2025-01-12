@@ -173,7 +173,7 @@ function handleClothesClick(imageSrc) {
   exitButton.style.border = '1px solid #FFFFFF';
   exitButton.style.borderRadius = '8px';
   exitButton.addEventListener('click', () => {
-    window.location.href = 'index.html'; // Redirect to index.html
+    window.location.href = 'main.html'; // Redirect to index.html
   });
 
   // Append buttons to the buttons container
@@ -184,4 +184,5 @@ function handleClothesClick(imageSrc) {
   const roundedWindow = document.querySelector('.rounded-window');
   roundedWindow.appendChild(buttonsContainer);
 }
+
 
