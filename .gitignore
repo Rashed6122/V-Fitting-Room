@@ -1,0 +1,5 @@
+media/
+v_fit/
+V_Fitting/
+db.sqlite3
+manage.py
