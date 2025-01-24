@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin"> 
     <title>Clothes - Virtual Try-On</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: var(--font-family);
+            margin: 0;  /* Reset default margins */
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,10 +30,12 @@
                     </li>
                     <li>
                         <div class="right-sponsor">
-                            <span class="sponsor-text">SPONSORED BY</span>
+                            <div class="SPONSORED"><span class="sponsor-text">SPONSORED BY</span></div>
+                            <div class="iono">
                             <img src="imgs/IONO GIF 1.png" alt="IONO" class="top-iono-logo">
                             <span class="iono-text">IONO</span>
                             <span class="technology-text1">TECHNOLOGY</span>
+                            </div>
                         </div>
                     </li>
                 </ul>

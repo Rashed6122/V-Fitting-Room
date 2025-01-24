@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin"> 
     <title>Clothes - Fashion Website</title>
     <style>
          @keyframes spin2D {
@@ -26,7 +27,6 @@
             color: #fff;
             opacity: 1; /* Default to fully visible */
             transition: opacity 1s ease; /* Smooth opacity transitions */
-
         }
 
         header {
@@ -251,43 +251,44 @@
 
         // Change content after 1.5 seconds (once only)
         setTimeout(() => {
-    // Make the screen lighter
-    transparentContainer.classList.add('lighter');
-    hero.classList.remove('darker');
+        // Make the screen lighter
+        transparentContainer.classList.add('lighter');
+        hero.classList.remove('darker');
 
-    setTimeout(() => {
-                // Revert to darker
-                transparentContainer.classList.remove('lighter');
-                hero.classList.add('darker');
+        fetch('https://exact-marmoset-stable.ngrok-free.app/init', {
+            method: 'POST',
+        })
+        .then((response) => response.json()) // Parse the response as JSON
+        .then((data) => console.log('Response:', data))
+        .catch(error => console.error('Error:', error));
 
-                // Optional: Additional actions after returning to darker state
-                setTimeout(() => {
-                    sponsorSection.style.opacity = 0;
-                
+        setTimeout(() => {
+                    // Revert to darker
+                    transparentContainer.classList.remove('lighter');
+                    hero.classList.add('darker');
+
+                    // Optional: Additional actions after returning to darker state
                     setTimeout(() => {
-                        sponsorSection.style.display = 'none';
-                        promoText.style.display = 'block';
+                        sponsorSection.style.opacity = 0;
                     
                         setTimeout(() => {
-                            promoText.style.opacity = 1;
+                            sponsorSection.style.display = 'none';
+                            promoText.style.display = 'block';
                         
-                            //Fade out current screen and redirect
                             setTimeout(() => {
-                                document.body.style.transition = 'opacity 1s ease';
-                                document.body.style.opacity = 50;
+                                promoText.style.opacity = 1;
                             
-                                // Wait for fade-out transition to complete before redirecting
                                 setTimeout(() => {
-                                    window.location.href = 'main.html';
-                                }, 1000); // Match the transition duration
-                            }, 1000); // Adjust timing for the fade-out to start
-                        }, 50);
-                    }, 500);
-                }, 500); // Adjust delay for reverting to darker
-            }, 1000); // Adjust duration for lighter state
-        }, 1500);
-
-
+                                    document.querySelector('body').style.opacity = 0.5
+                                    setTimeout(function() { 
+                                        window.location.href = 'main.html';
+                                    }, 50)
+                                }, 5000); //second text time
+                            }, 100); // time between two texts
+                        }, 1000);
+                    }, 10); // time of text one
+                }, 1000); // light screen time
+            }, 1500); //text one 
     </script>
 </body>
 </html>
