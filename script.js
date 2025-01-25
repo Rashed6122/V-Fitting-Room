@@ -173,6 +173,17 @@ function replaceUploadInterface(imageSrc) {
                 <img src="imgs/11450_00.jpg" alt="Clothes 19" class="clothes-image" data-name="19">
                 <img src="imgs/13102_00.jpg" alt="Clothes 20" class="clothes-image" data-name="20">
                 <img src="imgs/14358_00.jpg" alt="Clothes 21" class="clothes-image" data-name="21">
+                <img src="imgs/09276_00.jpg" alt="Clothes 22" class="clothes-image" data-name="22">
+                <img src="imgs/09290_00.jpg" alt="Clothes 23" class="clothes-image" data-name="23">
+                <img src="imgs/11715_00.jpg" alt="Clothes 24" class="clothes-image" data-name="24">
+                <img src="imgs/11738_00.jpg" alt="Clothes 25" class="clothes-image" data-name="25">
+                <img src="imgs/13468_00.jpg" alt="Clothes 26" class="clothes-image" data-name="26">
+                <img src="imgs/13844_00.jpg" alt="Clothes 27" class="clothes-image" data-name="27">
+                <img src="imgs/10915_00.jpg" alt="Clothes 28" class="clothes-image" data-name="28">
+                <img src="imgs/10567_00.jpg" alt="Clothes 29" class="clothes-image" data-name="29">
+                <img src="imgs/09685_00.jpg" alt="Clothes 30" class="clothes-image" data-name="30">
+                <img src="imgs/09236_00.jpg" alt="Clothes 31" class="clothes-image" data-name="31">
+                <img src="imgs/11584_00.jpg" alt="Clothes 32" class="clothes-image" data-name="32">
                 <div class="cloloader-overlay" id="cloloader-overlay">
                   <span class="cloloader" id="cloloading-spinner"></span>
                 </div>
@@ -361,6 +372,17 @@ function updateUploadAreaWithResult(srcImage ,returnedImageSrc) {
                   <img src="imgs/11450_00.jpg" alt="Clothes 19" class="clothes-image" data-name="19">
                   <img src="imgs/13102_00.jpg" alt="Clothes 20" class="clothes-image" data-name="20">
                   <img src="imgs/14358_00.jpg" alt="Clothes 21" class="clothes-image" data-name="21">
+                  <img src="imgs/09276_00.jpg" alt="Clothes 22" class="clothes-image" data-name="22">
+                  <img src="imgs/09290_00.jpg" alt="Clothes 23" class="clothes-image" data-name="23">
+                  <img src="imgs/11715_00.jpg" alt="Clothes 24" class="clothes-image" data-name="24">
+                  <img src="imgs/11738_00.jpg" alt="Clothes 25" class="clothes-image" data-name="25">
+                  <img src="imgs/13468_00.jpg" alt="Clothes 26" class="clothes-image" data-name="26">
+                  <img src="imgs/13844_00.jpg" alt="Clothes 27" class="clothes-image" data-name="27">
+                  <img src="imgs/10915_00.jpg" alt="Clothes 28" class="clothes-image" data-name="28">
+                  <img src="imgs/10567_00.jpg" alt="Clothes 29" class="clothes-image" data-name="29">
+                  <img src="imgs/09685_00.jpg" alt="Clothes 30" class="clothes-image" data-name="30">
+                  <img src="imgs/09236_00.jpg" alt="Clothes 31" class="clothes-image" data-name="31">
+                  <img src="imgs/11584_00.jpg" alt="Clothes 32" class="clothes-image" data-name="32">
                   <div class="cloloader-overlay" id="cloloader-overlay">
                     <span class="cloloader" id="cloloading-spinner"></span>
                   </div>
