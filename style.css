@@ -424,7 +424,7 @@ nav a {
 
 .rounded-window {
     width: 90%; /* Adjust the width as needed */
-    height: 600px; /* Adjust the height as needed */
+    height: 650px; /* Adjust the height as needed */
     margin: 1px auto; /* Center the window */
     border-radius: 15px; /* Rounded corners */
     background-color: #f0f0f0; /* Light gray background */
@@ -444,7 +444,7 @@ nav a {
 
 .upload-area {
     width: 100%; /* Adjust size as needed */
-    height: 350px; /* Adjust height as needed */
+    height: 400px; /* Adjust height as needed */
     margin: 10px auto;
     background-color: #fff;
     border: 2px dashed #ccc;
@@ -496,20 +496,37 @@ input[type="file"] {
     gap: 20px; /* Space between sections */
     padding: 20px;
     /* border: 2px dashed #d6cfea; Border similar to the example */
-    height: 100vh; /* Full viewport height */
+    height: 400px; /* Full viewport height */
     overflow: hidden; /* Prevent horizontal scroll */
 }
 
 /* Uploaded image section */
 .uploaded-image-container {
     position: relative;
-    flex: 0.2; 
+    flex: 0.25; 
     text-align: center;
     transition: all 0.3s ease;
 }
 
 .uploaded-image-container img {
-    height: 270px; /* Adjust image height */;
+    height: 320px; /* Adjust image height */;
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Fit within container */
+    border-radius: 10px;
+    margin-bottom: 10px; /* Space between image and caption */
+    transition: all 0.3s ease;
+}
+
+/* Uploaded image section */
+.uploadedd-image-container {
+    position: relative;
+    flex: 0.25; 
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.uploadedd-image-container img {
+    height: 420px; /* Adjust image height */;
     width: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Fit within container */
     border-radius: 10px;
@@ -532,7 +549,7 @@ input[type="file"] {
 
 /* Clothes section */
 .clothes-section {
-    flex: 0.8; /* Take 70% of the width */
+    flex: 0.75; /* Take 70% of the width */
     display: flex;
     flex-direction: column;
 }
@@ -548,11 +565,11 @@ input[type="file"] {
 .clothes-container {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 4 images per row */
+    grid-template-columns: repeat(4, 1fr); /* 4 images per row */
     gap: 15px; /* Space between images */
     overflow-y: auto; /* Enable vertical scrolling */
-    height: 200px; /* Adjust height for scrolling */
-    padding: 10px;
+    height: 320px; /* Adjust height for scrolling */
+    padding: 5px;
     scroll-behavior: smooth;
 }
     

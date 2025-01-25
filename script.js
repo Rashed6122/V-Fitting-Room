@@ -152,8 +152,27 @@ function replaceUploadInterface(imageSrc) {
         <div class="clothes-section">
             <h2>Choose Your Outfit</h2>
             <div class="clothes-container">
-                <img src="imgs/clothe1.jpg" alt="Clothes 1" class="clothes-image" data-name="clothe1.jpg">
-                <img src="imgs/clothes1.png" alt="Clothes 2" class="clothes-image" data-name="clothes2.png">
+                <img src="imgs/03604_00.jpg" alt="Clothes 1" class="clothes-image" data-name="1">
+                <img src="imgs/05624_00.jpg" alt="Clothes 2" class="clothes-image" data-name="2">
+                <img src="imgs/07622_00.jpg" alt="Clothes 3" class="clothes-image" data-name="3">
+                <img src="imgs/08314_00.jpg" alt="Clothes 4" class="clothes-image" data-name="4">
+                <img src="imgs/08432_00.jpg" alt="Clothes 5" class="clothes-image" data-name="5">
+                <img src="imgs/08877_00.jpg" alt="Clothes 6" class="clothes-image" data-name="6">
+                <img src="imgs/09246_00.jpg" alt="Clothes 7" class="clothes-image" data-name="7">
+                <img src="imgs/09256_00.jpg" alt="Clothes 8" class="clothes-image" data-name="8">
+                <img src="imgs/00599_00.jpg" alt="Clothes 9" class="clothes-image" data-name="9">
+                <img src="imgs/00713_00.jpg" alt="Clothes 10" class="clothes-image" data-name="10">
+                <img src="imgs/00888_00.jpg" alt="Clothes 11" class="clothes-image" data-name="11">
+                <img src="imgs/02365_00.jpg" alt="Clothes 12" class="clothes-image" data-name="12">
+                <img src="imgs/02673_00.jpg" alt="Clothes 13" class="clothes-image" data-name="13">
+                <img src="imgs/03922_00.jpg" alt="Clothes 14" class="clothes-image" data-name="14">
+                <img src="imgs/07627_00.jpg" alt="Clothes 15" class="clothes-image" data-name="15">
+                <img src="imgs/08008_00.jpg" alt="Clothes 16" class="clothes-image" data-name="16">
+                <img src="imgs/08212_00.jpg" alt="Clothes 17" class="clothes-image" data-name="17">
+                <img src="imgs/10698_00.jpg" alt="Clothes 18" class="clothes-image" data-name="18">
+                <img src="imgs/11450_00.jpg" alt="Clothes 19" class="clothes-image" data-name="19">
+                <img src="imgs/13102_00.jpg" alt="Clothes 20" class="clothes-image" data-name="20">
+                <img src="imgs/14358_00.jpg" alt="Clothes 21" class="clothes-image" data-name="21">
                 <div class="cloloader-overlay" id="cloloader-overlay">
                   <span class="cloloader" id="cloloading-spinner"></span>
                 </div>
@@ -207,13 +226,13 @@ function toBase64(file) {
   });
 }
 
-async function handleClothesClick(imageSrc, clothesImageName) {
+async function handleClothesClick(srcImage,clothesImageName) {
   try {
     showLoading();
   
     // Send a POST request to the API
     const requestBody = {
-      cloth_name: '1',
+      cloth_name: clothesImageName,
     };
 
     const response = await fetch('https://exact-marmoset-stable.ngrok-free.app/inference', {
@@ -239,7 +258,7 @@ async function handleClothesClick(imageSrc, clothesImageName) {
     const returnedImageSrc = `data:image/png;base64,${encodedImage}`;
 
     // Update the UI with the returned image
-    updateUploadAreaWithResult(returnedImageSrc);
+    updateUploadAreaWithResult(srcImage ,returnedImageSrc);
   } catch (error) {
     console.error('Error:', error);
     alert('An error occurred while processing your request. Please try again.');
@@ -265,29 +284,16 @@ function hideLoading() {
 }
 
 
-function updateUploadAreaWithResult(returnedImageSrc) {
+function updateUploadAreaWithResult(srcImage ,returnedImageSrc) {
   document.querySelector('.image-container-try').style.display = 'none';
   document.querySelector('.upload-area').style.height = '500px';
+  const rounded_window = document.getElementById('rounded-window');
   const uploadArea = document.getElementById('upload-area');
   uploadArea.innerHTML = `
-    <div class="uploaded-image-container">
+    <div class="uploadedd-image-container">
         <img src="${returnedImageSrc}" alt="Returned Image" class="centered-image">
     </div>
   `;
-
-  // Create a new title element
-  const titleElement = document.createElement('h2');
-  titleElement.textContent = 'Final Look';
-  titleElement.style.textAlign = 'center';
-  titleElement.style.marginBottom = '20px';
-  titleElement.style.fontSize = '24px';
-  titleElement.style.color = '#333';
-  titleElement.style.fontWeight = 'normal';
-
-  // Insert the title at the top of the final container
-  const finalContainer = document.querySelector('.uploaded-image-container');
-  finalContainer.insertBefore(titleElement, finalContainer.firstChild);
-
   // Create buttons container
   const buttonsContainer = document.createElement('div');
   buttonsContainer.style.display = 'flex';
@@ -295,7 +301,7 @@ function updateUploadAreaWithResult(returnedImageSrc) {
   buttonsContainer.style.gap = '20px';
   buttonsContainer.style.marginTop = '20px';
 
-  // Create Retry button
+    // Create Retry button
   const retryButton = document.createElement('button');
   retryButton.textContent = 'Retry';
   retryButton.style.padding = '5px 50px';
@@ -305,8 +311,78 @@ function updateUploadAreaWithResult(returnedImageSrc) {
   retryButton.style.color = '#000000';
   retryButton.style.border = '1px solid #FFFFFF';
   retryButton.style.borderRadius = '8px';
+
+
+  // Add click event for Retry button
   retryButton.addEventListener('click', () => {
-    window.location.href = 'TryOnPage.html'; // Redirect to TryOnPage.html
+    rounded_window.innerHTML = `
+    <div class="header-row">
+                        <h2>
+                            <span style="color: #79BCCF;">TRY</span> VIRTUAL TRY ON
+                        </h2>
+                        <a href="main.html" class="exit-icon" aria-label="Exit">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="thin-x">
+                                <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                <line x1="6" y1="18" x2="18" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </a>                        
+                    </div>
+      <div class="upload-area" id="upload-area">
+      <div class="content-wrapper">
+          <div class="uploaded-image-container">
+              <img src="${srcImage}" alt="Uploaded Image">
+              <div class="loader-overlay" id="loader-overlay">
+                  <span class="loader" id="loading-spinner"></span>
+              </div>
+              <p class="image-caption">YOUR IMAGE</p>
+          </div>
+          <div class="vertical-line"></div>
+          <div class="clothes-section">
+              <h2>Choose Your Outfit</h2>
+              <div class="clothes-container">
+                  <img src="imgs/03604_00.jpg" alt="Clothes 1" class="clothes-image" data-name="1">
+                  <img src="imgs/05624_00.jpg" alt="Clothes 2" class="clothes-image" data-name="2">
+                  <img src="imgs/07622_00.jpg" alt="Clothes 3" class="clothes-image" data-name="3">
+                  <img src="imgs/08314_00.jpg" alt="Clothes 4" class="clothes-image" data-name="4">
+                  <img src="imgs/08432_00.jpg" alt="Clothes 5" class="clothes-image" data-name="5">
+                  <img src="imgs/08877_00.jpg" alt="Clothes 6" class="clothes-image" data-name="6">
+                  <img src="imgs/09246_00.jpg" alt="Clothes 7" class="clothes-image" data-name="7">
+                  <img src="imgs/09256_00.jpg" alt="Clothes 8" class="clothes-image" data-name="8">
+                  <img src="imgs/00599_00.jpg" alt="Clothes 9" class="clothes-image" data-name="9">
+                  <img src="imgs/00713_00.jpg" alt="Clothes 10" class="clothes-image" data-name="10">
+                  <img src="imgs/00888_00.jpg" alt="Clothes 11" class="clothes-image" data-name="11">
+                  <img src="imgs/02365_00.jpg" alt="Clothes 12" class="clothes-image" data-name="12">
+                  <img src="imgs/02673_00.jpg" alt="Clothes 13" class="clothes-image" data-name="13">
+                  <img src="imgs/03922_00.jpg" alt="Clothes 14" class="clothes-image" data-name="14">
+                  <img src="imgs/07627_00.jpg" alt="Clothes 15" class="clothes-image" data-name="15">
+                  <img src="imgs/08008_00.jpg" alt="Clothes 16" class="clothes-image" data-name="16">
+                  <img src="imgs/08212_00.jpg" alt="Clothes 17" class="clothes-image" data-name="17">
+                  <img src="imgs/10698_00.jpg" alt="Clothes 18" class="clothes-image" data-name="18">
+                  <img src="imgs/11450_00.jpg" alt="Clothes 19" class="clothes-image" data-name="19">
+                  <img src="imgs/13102_00.jpg" alt="Clothes 20" class="clothes-image" data-name="20">
+                  <img src="imgs/14358_00.jpg" alt="Clothes 21" class="clothes-image" data-name="21">
+                  <div class="cloloader-overlay" id="cloloader-overlay">
+                    <span class="cloloader" id="cloloading-spinner"></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      <div class="image-container-try">
+                        <img id="image1" class="image2" src="imgs/Property1.png" alt="Rotating Image 1">
+                        <img id="image2" class="image2 active" src="imgs/Property2.png" alt="Rotating Image 2">
+                        <img id="image3" class="image2" src="imgs/Property3.png" alt="Rotating Image 3">
+      </div>
+    `;
+    hideLoader();
+    // Rebind click listeners for clothes selection
+    const clothesImages = document.querySelectorAll('.clothes-image');
+    clothesImages.forEach((clothingImage) => {
+      clothingImage.addEventListener('click', () => {
+        const clothesImageName = clothingImage.getAttribute('data-name');
+        handleClothesClick(srcImage ,clothesImageName);
+      });
+    });
   });
 
   // Create Exit button
