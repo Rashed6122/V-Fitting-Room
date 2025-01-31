@@ -349,8 +349,6 @@ function updateUploadAreaWithResult(srcImage ,returnedImageSrc) {
           </div>
           <div class="vertical-line"></div>
           <div class="clothes-section">
-              <h2>Choose Your Outfit</h2>
-              <div class="clothes-section">
             <h2>Choose Your Outfit</h2>
             <div class="clothes-container">
                 <img src="imgs/03604_00.jpg" alt="Clothes 1" class="clothes-image" data-name="1">
@@ -389,7 +387,7 @@ function updateUploadAreaWithResult(srcImage ,returnedImageSrc) {
             <div class="cloloader-overlay" id="cloloader-overlay">
                   <span class="cloloader" id="cloloading-spinner"></span>
             </div>
-          </div>
+        </div>
       </div>
       </div>
       <div class="image-container-try">
