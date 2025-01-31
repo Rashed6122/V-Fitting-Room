@@ -153,35 +153,35 @@ function replaceUploadInterface(imageSrc) {
             <h2>Choose Your Outfit</h2>
             <div class="clothes-container">
                 <img src="imgs/03604_00.jpg" alt="Clothes 1" class="clothes-image" data-name="1">
-                <img src="imgs/05624_00.jpg" alt="Clothes 2" class="clothes-image" data-name="2">
-                <img src="imgs/07622_00.jpg" alt="Clothes 3" class="clothes-image" data-name="3">
-                <img src="imgs/08314_00.jpg" alt="Clothes 4" class="clothes-image" data-name="4">
-                <img src="imgs/08432_00.jpg" alt="Clothes 5" class="clothes-image" data-name="5">
-                <img src="imgs/08877_00.jpg" alt="Clothes 6" class="clothes-image" data-name="6">
-                <img src="imgs/09246_00.jpg" alt="Clothes 7" class="clothes-image" data-name="7">
-                <img src="imgs/09256_00.jpg" alt="Clothes 8" class="clothes-image" data-name="8">
                 <img src="imgs/00599_00.jpg" alt="Clothes 9" class="clothes-image" data-name="9">
                 <img src="imgs/00713_00.jpg" alt="Clothes 10" class="clothes-image" data-name="10">
                 <img src="imgs/00888_00.jpg" alt="Clothes 11" class="clothes-image" data-name="11">
+                <img src="imgs/05624_00.jpg" alt="Clothes 2" class="clothes-image" data-name="2">
                 <img src="imgs/02365_00.jpg" alt="Clothes 12" class="clothes-image" data-name="12">
                 <img src="imgs/02673_00.jpg" alt="Clothes 13" class="clothes-image" data-name="13">
                 <img src="imgs/03922_00.jpg" alt="Clothes 14" class="clothes-image" data-name="14">
+                <img src="imgs/07622_00.jpg" alt="Clothes 3" class="clothes-image" data-name="3">
                 <img src="imgs/07627_00.jpg" alt="Clothes 15" class="clothes-image" data-name="15">
                 <img src="imgs/08008_00.jpg" alt="Clothes 16" class="clothes-image" data-name="16">
                 <img src="imgs/08212_00.jpg" alt="Clothes 17" class="clothes-image" data-name="17">
                 <img src="imgs/10698_00.jpg" alt="Clothes 18" class="clothes-image" data-name="18">
+                <img src="imgs/08314_00.jpg" alt="Clothes 4" class="clothes-image" data-name="4">
                 <img src="imgs/11450_00.jpg" alt="Clothes 19" class="clothes-image" data-name="19">
                 <img src="imgs/13102_00.jpg" alt="Clothes 20" class="clothes-image" data-name="20">
                 <img src="imgs/14358_00.jpg" alt="Clothes 21" class="clothes-image" data-name="21">
+                <img src="imgs/08432_00.jpg" alt="Clothes 5" class="clothes-image" data-name="5">
                 <img src="imgs/09276_00.jpg" alt="Clothes 22" class="clothes-image" data-name="22">
                 <img src="imgs/09290_00.jpg" alt="Clothes 23" class="clothes-image" data-name="23">
+                <img src="imgs/08877_00.jpg" alt="Clothes 6" class="clothes-image" data-name="6">
                 <img src="imgs/11715_00.jpg" alt="Clothes 24" class="clothes-image" data-name="24">
                 <img src="imgs/11738_00.jpg" alt="Clothes 25" class="clothes-image" data-name="25">
                 <img src="imgs/13468_00.jpg" alt="Clothes 26" class="clothes-image" data-name="26">
+                <img src="imgs/09246_00.jpg" alt="Clothes 7" class="clothes-image" data-name="7">
                 <img src="imgs/13844_00.jpg" alt="Clothes 27" class="clothes-image" data-name="27">
                 <img src="imgs/10915_00.jpg" alt="Clothes 28" class="clothes-image" data-name="28">
                 <img src="imgs/10567_00.jpg" alt="Clothes 29" class="clothes-image" data-name="29">
                 <img src="imgs/09685_00.jpg" alt="Clothes 30" class="clothes-image" data-name="30">
+                <img src="imgs/09256_00.jpg" alt="Clothes 8" class="clothes-image" data-name="8">
                 <img src="imgs/09236_00.jpg" alt="Clothes 31" class="clothes-image" data-name="31">
                 <img src="imgs/11584_00.jpg" alt="Clothes 32" class="clothes-image" data-name="32">
                 <div class="cloloader-overlay" id="cloloader-overlay">
