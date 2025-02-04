@@ -418,7 +418,7 @@ function updateUploadAreaWithResult(srcImage ,returnedImageSrc) {
   exitButton.style.border = '1px solid #FFFFFF';
   exitButton.style.borderRadius = '8px';
   exitButton.addEventListener('click', () => {
-    window.location.href = 'main.html'; // Redirect to main.html
+    window.location.href = 'tryOnPage.html'; // Redirect to main.html
   });
 
   // Append buttons to the buttons container
